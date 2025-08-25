@@ -139,7 +139,7 @@
             this.displaypicturebox.Image = ((System.Drawing.Image)(resources.GetObject("displaypicturebox.Image")));
             this.displaypicturebox.Location = new System.Drawing.Point(217, 101);
             this.displaypicturebox.Name = "displaypicturebox";
-            this.displaypicturebox.Size = new System.Drawing.Size(222, 166);
+            this.displaypicturebox.Size = new System.Drawing.Size(305, 166);
             this.displaypicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.displaypicturebox.TabIndex = 10;
             this.displaypicturebox.TabStop = false;
@@ -149,7 +149,7 @@
             this.description.Location = new System.Drawing.Point(217, 276);
             this.description.Multiline = true;
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(222, 80);
+            this.description.Size = new System.Drawing.Size(305, 183);
             this.description.TabIndex = 11;
             // 
             // namelbl
