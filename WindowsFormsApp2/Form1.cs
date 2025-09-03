@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
             int l = 0;
             int w = 0;
             int.TryParse(textBox1.Text, out l);
-            int.TryParse(textBox2.Text, out w);    
+            int.TryParse(textBox2.Text, out w);
             int area = rArea(l, w);
             int prei = rPerimeter(l, w);
             textBox3.Text = area.ToString();
@@ -51,9 +51,9 @@ namespace WindowsFormsApp2
             int area = rArea(l, l);
             int prei = rPerimeter(l, l);
             textBox6.Text = area.ToString();
-        textBox7.Text = prei.ToString();
+            textBox7.Text = prei.ToString();
         }
-            
+
         private void button3_Click(object sender, EventArgs e)
         {
             int r = 0;
@@ -64,12 +64,12 @@ namespace WindowsFormsApp2
             textBox11.Text = carea.ToString();
             textBox10.Text = cie.ToString();
             textBox9.Text = dia.ToString();
-      
+
         }
 
         private double car(int r)
         {
-            return Math.PI   * (r * r) ;
+            return Math.PI * (r * r);
         }
         private double france(int r)
         {
@@ -98,6 +98,35 @@ namespace WindowsFormsApp2
         private double albania(int s)
         {
             return s * 3;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int a = 0;
+            int b = 0;
+            int.TryParse(textBox13.Text, out a);
+            int.TryParse(textBox16.Text, out b);
+            double hyp = hypo(a, b);
+            double p = rtperi(a, b);
+            double area = rtarea(a, b);
+            textBox19.Text = hyp.ToString();
+            textBox18.Text = p.ToString();
+            textBox17.Text = area.ToString();
+        }
+
+        private double hypo(int a, int b)
+        {
+            return (Math.Sqrt((a * a) + (b * b)));
+        }
+
+        private double rtperi(int a, int b)
+        {
+            return a + b + (Math.Sqrt((a * a) + (b * b)));
+        }
+
+        private double rtarea(int a, int b)
+        {
+            return (a * b) / 2;
         }
     }
 }
