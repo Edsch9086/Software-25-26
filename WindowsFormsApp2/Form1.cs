@@ -128,5 +128,40 @@ namespace WindowsFormsApp2
         {
             return (a * b) / 2;
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            textBox1.Text = trackBar1.Value.ToString();
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            textBox2.Text = trackBar2.Value.ToString();
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            textBox8.Text = trackBar3.Value.ToString();
+        }
+
+        private void trackBar4_Scroll(object sender, EventArgs e)
+        {
+            textBox13.Text = trackBar4.Value.ToString();
+        }
+
+        private void trackBar5_Scroll(object sender, EventArgs e)
+        {
+            textBox16.Text = trackBar5.Value.ToString();
+        }
+
+        private void trackBar6_Scroll(object sender, EventArgs e)
+        {
+            textBox5.Text = trackBar6.Value.ToString();
+        }
+
+        private void trackBar7_Scroll(object sender, EventArgs e)
+        {
+            textBox12.Text = trackBar7.Value.ToString();
+        }
     }
 }
