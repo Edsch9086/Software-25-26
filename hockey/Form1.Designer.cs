@@ -37,18 +37,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.p3 = new System.Windows.Forms.PictureBox();
-            this.p4 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.leftGoalLine = new System.Windows.Forms.PictureBox();
+            this.rightGoalLine = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftGoalLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightGoalLine)).BeginInit();
             this.SuspendLayout();
             // 
             // p1
@@ -110,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label3.Location = new System.Drawing.Point(349, 22);
+            this.label3.Location = new System.Drawing.Point(260, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 6;
@@ -118,78 +113,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(268, 9);
+            this.button1.Location = new System.Drawing.Point(179, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 42);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Switch P2 Mode";
+            this.button1.Text = "Switch Mode";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // leftGoalLine
             // 
-            this.button2.Location = new System.Drawing.Point(187, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 42);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.leftGoalLine.BackColor = System.Drawing.Color.White;
+            this.leftGoalLine.Location = new System.Drawing.Point(0, (this.ClientSize.Height - 200) / 2);
+            this.leftGoalLine.Size = new System.Drawing.Size(2, 200);
+            this.leftGoalLine.TabIndex = 8;
+            this.leftGoalLine.TabStop = false;
+            this.Controls.Add(this.leftGoalLine);
             // 
-            // p3
+            // rightGoalLine
             // 
-            this.p3.BackColor = System.Drawing.Color.White;
-            this.p3.Location = new System.Drawing.Point(12, 725);
-            this.p3.Name = "p3";
-            this.p3.Size = new System.Drawing.Size(16, 127);
-            this.p3.TabIndex = 9;
-            this.p3.TabStop = false;
-            // 
-            // p4
-            // 
-            this.p4.BackColor = System.Drawing.Color.White;
-            this.p4.Location = new System.Drawing.Point(1236, 725);
-            this.p4.Name = "p4";
-            this.p4.Size = new System.Drawing.Size(16, 127);
-            this.p4.TabIndex = 10;
-            this.p4.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(487, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 42);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Switch P3 Mode";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label4.Location = new System.Drawing.Point(568, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Mode:";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(693, 11);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 42);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Switch P4 Mode";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label5.Location = new System.Drawing.Point(774, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Mode:";
+            this.rightGoalLine.BackColor = System.Drawing.Color.White;
+            this.rightGoalLine.Location = new System.Drawing.Point(this.ClientSize.Width - 2, (this.ClientSize.Height - 200) / 2);
+            this.rightGoalLine.Size = new System.Drawing.Size(2, 200);
+            this.rightGoalLine.TabIndex = 9;
+            this.rightGoalLine.TabStop = false;
+            this.Controls.Add(this.rightGoalLine);
             // 
             // Form1
             // 
@@ -197,13 +144,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1264, 864);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.p4);
-            this.Controls.Add(this.p3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -220,8 +160,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftGoalLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightGoalLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,13 +177,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox p3;
-        private System.Windows.Forms.PictureBox p4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox leftGoalLine;
+        private System.Windows.Forms.PictureBox rightGoalLine;
     }
 }
 
