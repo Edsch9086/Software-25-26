@@ -41,15 +41,13 @@ namespace WindowsFormsApp3
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
 
-            // Initialize tank positions
+            // Store the original images BEFORE any rotation
+            bluetank.Tag = bluetank.Image;
+            redtank.Tag = redtank.Image;
+
+            // Initialize tank positions and angles
             ResetTank(bluetank, ref blueTankX, ref blueTankY, ref blueTankAngle, blueTankStart, 90);
             ResetTank(redtank, ref redTankX, ref redTankY, ref redTankAngle, redTankStart, 90);
-
-            bluetank.Tag = bluetank.Image; // Store the original image for rotation
-            bluetank.Image = RotateImage((Image)bluetank.Tag, blueTankAngle - 90); // Set initial rotation (up)
-
-            redtank.Tag = redtank.Image;
-            redtank.Image = RotateImage((Image)redtank.Tag, redTankAngle - 90);
 
             gameTimer = new Timer();
             gameTimer.Interval = 16; // ~60 FPS
@@ -69,8 +67,8 @@ namespace WindowsFormsApp3
                 blueBulletY = bluetank.Top + bluetank.Height / 2 - BulletSize / 2;
                 blueBulletAngle = blueTankAngle;
             }
-            // Red tank shoot (Enter)
-            if (e.KeyCode == Keys.Enter && !redBulletActive)
+            // Red tank shoot (Shift)
+            if ((e.KeyCode == Keys.ShiftKey || e.KeyCode == Keys.LShiftKey || e.KeyCode == Keys.RShiftKey) && !redBulletActive)
             {
                 redBulletActive = true;
                 redBulletX = redtank.Left + redtank.Width / 2 - BulletSize / 2;
@@ -114,8 +112,8 @@ namespace WindowsFormsApp3
             // Move and check blue bullet
             if (blueBulletActive)
             {
-                blueBulletX += (float)(BulletSpeed * Math.Cos(blueBulletAngle * Math.PI / 180));
-                blueBulletY += (float)(BulletSpeed * Math.Sin(blueBulletAngle * Math.PI / 180));
+                blueBulletX -= (float)(BulletSpeed * Math.Cos(blueBulletAngle * Math.PI / 180));
+                blueBulletY -= (float)(BulletSpeed * Math.Sin(blueBulletAngle * Math.PI / 180));
                 Rectangle bulletRect = new Rectangle((int)blueBulletX, (int)blueBulletY, BulletSize, BulletSize);
 
                 // Wall collision
@@ -145,8 +143,8 @@ namespace WindowsFormsApp3
             // Move and check red bullet
             if (redBulletActive)
             {
-                redBulletX += (float)(BulletSpeed * Math.Cos(redBulletAngle * Math.PI / 180));
-                redBulletY += (float)(BulletSpeed * Math.Sin(redBulletAngle * Math.PI / 180));
+                redBulletX -= (float)(BulletSpeed * Math.Cos(redBulletAngle * Math.PI / 180));
+                redBulletY -= (float)(BulletSpeed * Math.Sin(redBulletAngle * Math.PI / 180));
                 Rectangle bulletRect = new Rectangle((int)redBulletX, (int)redBulletY, BulletSize, BulletSize);
 
                 // Wall collision
