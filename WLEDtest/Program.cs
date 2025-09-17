@@ -43,11 +43,11 @@ try
 }
 catch (HttpRequestException e)
 {
-    Console.WriteLine($"Error during HTTP request: {e.Message}");
+    Console.WriteLine(e);
 }
 catch (Exception e)
 {
-    Console.WriteLine($"An unexpected error occurred: {e.Message}");
+    Console.WriteLine(e);
 }
 
     
