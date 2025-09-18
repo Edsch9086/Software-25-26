@@ -27,12 +27,12 @@ while (continueProgram)
     Console.WriteLine("wled ip");
     string ip = Console.ReadLine();
 
-    string url = $"http://{ip}/win&A={brightness}&R={red}&G={green}&B={blue}&W={white}";
+    string hex = $"{white:X2}{red:X2}{green:X2}{blue:X2}";
 
-    Console.WriteLine();
+    string url = $"http://{ip}/win&A={brightness}&CL=h{hex}";
+
     Console.WriteLine($"request = {url}");
     Console.WriteLine("sending...");
-    Console.WriteLine();
 
     try
     {

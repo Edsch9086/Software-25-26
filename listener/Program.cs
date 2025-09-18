@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static readonly IPAddress ip = IPAddress.Parse("127.0.0.1");
-    const int port = 1025;
+    static readonly IPAddress ip = IPAddress.Parse("192.168.1.19");
+    const int port = 53;
 
     static void Main()
     {
