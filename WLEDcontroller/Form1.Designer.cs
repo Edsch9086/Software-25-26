@@ -56,6 +56,7 @@
             this.address = new System.Windows.Forms.TextBox();
             this.console = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // red
@@ -303,7 +304,7 @@
             // 
             // address
             // 
-            this.address.Location = new System.Drawing.Point(338, 25);
+            this.address.Location = new System.Drawing.Point(360, 25);
             this.address.Margin = new System.Windows.Forms.Padding(2);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(88, 20);
@@ -332,11 +333,21 @@
             this.label12.Text = "<- useful preset numbers\r\n0 - solid cl\r\n1 - blink CL/C2\r\n84 - solid colpattern\r\n2" +
     "8 - CL running on C2\r\n54 - CL, C2, C3 rotating around\r\n";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(312, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 13);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "address";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 466);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.console);
             this.Controls.Add(this.address);
@@ -403,6 +414,7 @@
         private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.ListBox console;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 
