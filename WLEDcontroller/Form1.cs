@@ -116,6 +116,15 @@ namespace WLEDcontroller
                 console.Items.Add($"[ERROR]: Unexpected exception after {elapsed.TotalMilliseconds}ms: {e.Message}");
                 return null;
             }
+            finally
+            {
+                if (console.Items.Count > 0)
+                {
+                    int visibleItems = console.ClientSize.Height / console.ItemHeight;
+                    console.TopIndex = Math.Max(console.Items.Count - visibleItems + 1, 0);
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -177,7 +186,14 @@ namespace WLEDcontroller
                 console.Items.Add($"[ERROR]: Unexpected exception after {elapsed.TotalMilliseconds}ms: {e.Message}");
                 return null;
             }
-        
+            finally
+            {
+                if (console.Items.Count > 0)
+                {
+                    int visibleItems = console.ClientSize.Height / console.ItemHeight;
+                    console.TopIndex = Math.Max(console.Items.Count - visibleItems + 1, 0);
+                }
+            }
    
         } 
     } 
