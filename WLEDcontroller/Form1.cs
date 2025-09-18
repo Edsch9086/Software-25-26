@@ -103,7 +103,7 @@ namespace WLEDcontroller
                 if (e.InnerException != null)
                     console.Items.Add($"[ERROR]: Inner exception: {e.InnerException.Message}");
                 return null;
-            }
+            } 
             catch (TaskCanceledException e)
             {
                 var elapsed = DateTime.UtcNow - start;
@@ -154,7 +154,7 @@ namespace WLEDcontroller
                 console.Items.Add($"[DEBUG]: Success {(int)response.StatusCode} {response.ReasonPhrase} in {elapsed.TotalMilliseconds}ms");
                 console.Items.Add($"[DEBUG]: Response length: {responseBody.Length}");
                 console.Items.Add($"[DEBUG]: Response preview: {responseBody.Substring(0, Math.Min(200, responseBody.Length))}");
-
+                // :3
                 return responseBody;
             }
             catch (HttpRequestException e)
@@ -178,7 +178,10 @@ namespace WLEDcontroller
                 return null;
             }
         
-    } } }
+   
+        } 
+    } 
+}
 
 
 

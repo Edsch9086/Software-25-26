@@ -55,6 +55,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.TextBox();
             this.console = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // red
@@ -266,7 +267,7 @@
             this.bright.Name = "bright";
             this.bright.Size = new System.Drawing.Size(46, 20);
             this.bright.TabIndex = 22;
-            this.bright.Text = "0";
+            this.bright.Text = "128";
             // 
             // save3
             // 
@@ -320,11 +321,23 @@
             this.console.Size = new System.Drawing.Size(700, 134);
             this.console.TabIndex = 27;
             // 
+            // label12
+            // 
+            this.label12.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(60, 235);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 78);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "<- useful preset numbers\r\n0 - solid cl\r\n1 - blink CL/C2\r\n84 - solid colpattern\r\n2" +
+    "8 - CL running on C2\r\n54 - CL, C2, C3 rotating around\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 466);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.console);
             this.Controls.Add(this.address);
             this.Controls.Add(this.label11);
@@ -389,6 +402,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.ListBox console;
+        private System.Windows.Forms.Label label12;
     }
 }
 
